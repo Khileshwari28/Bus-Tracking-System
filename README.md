@@ -25,6 +25,11 @@ Bus Tracking System (BTS) designed specifically for college students, staff, and
 The **Bus Tracking System (BTS)** is tailored for college students, faculty, and staff to ensure nobody misses their bus or arrives late. With real-time tracking and live bus data, users stay informed and plan their travel efficiently.
 
 ---
+## Project Snapshots 
+
+![Image](https://github.com/user-attachments/assets/ff585393-57ad-4fb9-b3df-9985f57a6696)
+
+
 
 ## 📂 Project Structure
 
