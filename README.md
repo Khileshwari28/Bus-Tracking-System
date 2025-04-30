@@ -49,8 +49,7 @@ The **Bus Tracking System (BTS)** is tailored for college students, faculty, and
 
 ![Image](https://github.com/user-attachments/assets/8253dde7-296c-4c8a-8839-659a706319af)
 
-
-
+---
 
 ## 📂 Project Structure
 
