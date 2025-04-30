@@ -145,4 +145,4 @@ Frontend runs at: `http://localhost:5173`
 ## 👨‍💻 Author
 
 **Khileshwari Deshmukh** – Web Developer   
-📧 khileshwarideshmukh01@example.com
+📧 khileshwarideshmukh01@gmail.com
