@@ -1,0 +1,100 @@
+[
+    {
+        "id": 1,
+        "name": "Story Book",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod t0",
+        "price":0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?ga=GA1.1.1082054324.1743842981&semt=ais_hybrid&w=740"
+    },
+
+    {
+        "id": 2,
+        "name": "Comedy Book",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod t0",
+        "price":20,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?ga=GA1.1.1082054324.1743842981&semt=ais_hybrid&w=740"
+    },
+
+    {
+        "id": 3,
+        "name": "Hindi Book",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod t0",
+        "price":50,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?ga=GA1.1.1082054324.1743842981&semt=ais_hybrid&w=740"
+    },
+
+    {
+        "id": 4,
+        "name": "Sports Book",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod t0",
+        "price": 60,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?ga=GA1.1.1082054324.1743842981&semt=ais_hybrid&w=740"
+    },
+
+    {
+        "id": 5,
+        "name": "Music Book",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod t0",
+        "price":40,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?ga=GA1.1.1082054324.1743842981&semt=ais_hybrid&w=740"
+    },
+
+    {
+        "id": 6,
+        "name": "Free",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod t0",
+        "price":10,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?ga=GA1.1.1082054324.1743842981&semt=ais_hybrid&w=740"
+    },
+
+    {
+        "id": 7,
+        "name": "Play Book",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod t0",
+        "price":80,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?ga=GA1.1.1082054324.1743842981&semt=ais_hybrid&w=740"
+    },
+
+    {
+        "id": 8,
+        "name": "Sports Book",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod t0",
+        "price": 60,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?ga=GA1.1.1082054324.1743842981&semt=ais_hybrid&w=740"
+    },
+
+    {
+        "id": 9,
+        "name": "Music Book",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod t0",
+        "price":40,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?ga=GA1.1.1082054324.1743842981&semt=ais_hybrid&w=740"
+    },
+
+    {
+        "id": 10,
+        "name": "Free",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod t0",
+        "price":10,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?ga=GA1.1.1082054324.1743842981&semt=ais_hybrid&w=740"
+    },
+
+    {
+        "id": 11,
+        "name": "Play Book",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod t0",
+        "price":80,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?ga=GA1.1.1082054324.1743842981&semt=ais_hybrid&w=740"
+    }
+]
