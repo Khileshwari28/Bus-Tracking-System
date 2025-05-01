@@ -161,7 +161,6 @@ Frontend runs at: `http://localhost:5173`
 
 ## 🔮 Future Enhancements
 - 🗺️ Google Maps Integration  
-- 📱 Mobile Responsive Design  
 - 🧑‍💼 Admin Panel  
 - 📡 Live Location Updates  
 
