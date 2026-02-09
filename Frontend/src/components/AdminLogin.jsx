@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../api"; 
 import { useNavigate } from "react-router-dom";
 
 const AdminLogin = () => {
@@ -14,8 +14,8 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "http://localhost:8080/api/admin/login",
+      const response = await api.post(
+        "/api/admin/login",
         null,
         {
           params: {
