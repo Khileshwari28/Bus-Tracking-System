@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../api"; 
 import AddStudentModal from "./AddStudentModal";
 
 const Students = () => {
@@ -13,7 +13,7 @@ const Students = () => {
 
 
     const fetchStudents = async () => {
-        const res = await axios.get("http://localhost:8080/api/admin/students");
+        const res = await api.get("api/admin/students");
         setStudents(res.data);
     };
 
@@ -22,7 +22,7 @@ const Students = () => {
     }, []);
 
     const toggleStatus = async (id) => {
-        await axios.put(`http://localhost:8080/api/admin/students/${id}/toggle`);
+        await api.put(`api/admin/students/${id}/toggle`);
         fetchStudents();
     };
 
@@ -58,14 +58,14 @@ const Students = () => {
         if (!selectedStudent) return;
 
         if (confirmType === "delete") {
-            await axios.delete(
-                `http://localhost:8080/api/admin/students/${selectedStudent.id}`
+            await api.delete(
+                `api/admin/students/${selectedStudent.id}`
             );
         }
 
         if (confirmType === "update") {
-            await axios.put(
-                `http://localhost:8080/api/admin/students/${selectedStudent.id}/password`,
+            await api.put(
+                `api/admin/students/${selectedStudent.id}/password`,
                 null,
                 { params: { password: passwords[selectedStudent.id] } }
             );

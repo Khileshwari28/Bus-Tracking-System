@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../api"; 
 
 const AddStudentModal = ({ onClose, onAdded }) => {
   const [enrollmentNumber, setEnrollmentNumber] = useState("");
   const [password, setPassword] = useState("");
 
   const handleAdd = async () => {
-    await axios.post("http://localhost:8080/api/admin/students", {
+    await api.post("/api/admin/students", {
       enrollmentNumber,
       password,
     });
