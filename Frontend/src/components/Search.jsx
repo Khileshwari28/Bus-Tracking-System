@@ -26,10 +26,6 @@ function Search() {
     });
   };
 
-  const logout = () => {
-    localStorage.removeItem("token");
-    navigate("/login");
-  }
 
   return (
     <>
