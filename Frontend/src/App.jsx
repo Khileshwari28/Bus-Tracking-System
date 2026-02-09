@@ -1,46 +1,62 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 import Home from "./components/Home";
 import Search from "./components/Search";
-import { Navigate } from "react-router-dom";
-import { BrowserRouter, useState, useEffect } from "react";
 import MapPage from "./components/MapPage";
-import {  Route, Routes } from "react-router-dom";
+import AdminDashboard from "./admin/AdminDashboard";
 
+/* ---------- Private Route ---------- */
 const PrivateRoute = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem("token"));
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    !!localStorage.getItem("token")
+  );
 
-  // Listen for token changes
   useEffect(() => {
     const checkAuth = () => {
       setIsAuthenticated(!!localStorage.getItem("token"));
     };
-    
-    // Check on initial load
-    checkAuth();
-    
-    // Listen for storage events (from other tabs)
-    window.addEventListener('storage', checkAuth);
-    
-    return () => window.removeEventListener('storage', checkAuth);
+
+    window.addEventListener("storage", checkAuth);
+    return () => window.removeEventListener("storage", checkAuth);
   }, []);
 
-  return isAuthenticated ? children: <Navigate to="/" />;
-
+  return isAuthenticated ? children : <Navigate to="/" replace />;
 };
 
+/* ---------- App ---------- */
 function App() {
   return (
-    <>
-      {/* <div >
-        <NavBar />
-        <Footer />
-      </div> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/map" element = {<MapPage />}/>
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      <Route
+        path="/search"
+        element={
+          <PrivateRoute>
+            <Search />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/map"
+        element={
+          <PrivateRoute>
+            <MapPage />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/admin-dashboard"
+        element={
+          <PrivateRoute>
+            <AdminDashboard />
+          </PrivateRoute>
+        }
+      />
+    </Routes>
   );
 }
 
