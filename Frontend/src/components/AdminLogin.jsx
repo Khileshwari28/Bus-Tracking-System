@@ -11,40 +11,41 @@ const AdminLogin = () => {
   const [messageType, setMessageType] = useState(""); // success | error
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const response = await api.post(
-        "/api/admin/login",
-        null,
-        {
-          params: {
-            adminId,
-            password,
-          },
-        }
-      );
+  try {
+    const response = await api.post(
+      "/api/admin/login",
+      null,
+      { params: { adminId, password } }
+    );
 
-      if (response.data === "Admin Login Successful") {
-        localStorage.setItem("token", "admin-auth");
-        navigate("/admin-dashboard");
-      }
-      else {
-        setMessageType("error");
-        setMessage(response.data || "Login failed. Please try again.");
-      }
-    } catch (error) {
+    // ✅ Normalize backend response
+    const msg =
+      typeof response.data === "string"
+        ? response.data
+        : response.data?.message;
+
+    if (msg === "Admin Login Successful") {
+      localStorage.setItem("token", "admin-auth");
+      navigate("/admin-dashboard");
+    } else {
       setMessageType("error");
-
-      if (error.response) {
-        setMessage(error.response.data || "Invalid Admin ID or Password");
-      } else if (error.request) {
-        setMessage("No response from server. Please check your connection.");
-      } else {
-        setMessage("An unexpected error occurred. Please try again.");
-      }
+      setMessage(msg || "Login failed. Please try again.");
     }
-  };
+  } catch (error) {
+    setMessageType("error");
+
+    if (error.response) {
+      setMessage(error.response.data || "Invalid Admin ID or Password");
+    } else if (error.request) {
+      setMessage("No response from server. Please check your connection.");
+    } else {
+      setMessage("An unexpected error occurred. Please try again.");
+    }
+  }
+};
+
 
   return (
     <div className="flex flex-col text-red-700">

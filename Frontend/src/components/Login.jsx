@@ -11,44 +11,40 @@ const Login = () => {
   const [messageType, setMessageType] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const response = await api.post(
-        "/api/auth/login",
-        null,
-        {
-          params: {
-            enrollmentNumber,
-            password,
-          },
-        }
-      );
+  try {
+    const response = await api.post(
+      "/api/auth/login",
+      null,
+      { params: { enrollmentNumber, password } }
+    );
 
-      if (response.data === "Login Successful") {
-        setMessageType("success");
-        setMessage("Login Successful");
+    // ✅ Normalize backend response
+    const msg =
+      typeof response.data === "string"
+        ? response.data
+        : response.data?.message;
 
-        // 🔑 REQUIRED for PrivateRoute
-        localStorage.setItem("token", "student-auth");
-
-        navigate("/search");
-      } else {
-        setMessageType("error");
-        setMessage(response.data || "Login failed");
-      }
-    } catch (error) {
+    if (msg === "Login Successful") {
+      localStorage.setItem("token", "student-auth");
+      navigate("/search");
+    } else {
       setMessageType("error");
-
-      if (error.response) {
-        setMessage(error.response.data || "Invalid credentials");
-      } else if (error.request) {
-        setMessage("No response from server");
-      } else {
-        setMessage("Unexpected error occurred");
-      }
+      setMessage(msg || "Login failed");
     }
-  };
+  } catch (error) {
+    setMessageType("error");
+
+    if (error.response) {
+      setMessage(error.response.data || "Invalid credentials");
+    } else if (error.request) {
+      setMessage("No response from server");
+    } else {
+      setMessage("Unexpected error occurred");
+    }
+  }
+};
 
   return (
     <div className="flex flex-col text-red-700">
