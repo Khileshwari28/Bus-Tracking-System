@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import api from "../api"; 
+import api from "../api";
 import { useNavigate } from "react-router-dom";
 
 const AdminLogin = () => {
@@ -26,10 +26,10 @@ const AdminLogin = () => {
       );
 
       if (response.data === "Admin Login Successful") {
-        setMessageType("success");
-        setMessage("Admin Login Successful");
-        navigate("/admin-dashboard"); // change if needed
-      } else {
+        localStorage.setItem("token", "admin-auth");
+        navigate("/admin-dashboard");
+      }
+      else {
         setMessageType("error");
         setMessage(response.data || "Login failed. Please try again.");
       }
@@ -93,11 +93,10 @@ const AdminLogin = () => {
 
         {message && (
           <p
-            className={`mt-4 text-center font-semibold text-lg ${
-              messageType === "success"
+            className={`mt-4 text-center font-semibold text-lg ${messageType === "success"
                 ? "text-green-600"
                 : "text-red-700"
-            }`}
+              }`}
           >
             {message}
           </p>
