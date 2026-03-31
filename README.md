@@ -19,12 +19,13 @@ Bus Tracking System (BTS) designed specifically for college students, staff, and
 - [👨‍💻 Author](#-author)
 
 --- 
-## 🌐 Live Demo
+<!--## 🌐 Live Demo
 
 🔗 **Project Live URL:**  
 https://bts-production.up.railway.app
 
 ---
+
 
 ## 🔐 Demo Credentials
 
@@ -37,7 +38,7 @@ https://bts-production.up.railway.app
 - **Password:** `Admin@123`
 
 ---
----
+-->
 
 ## 📝 Project Description
 
