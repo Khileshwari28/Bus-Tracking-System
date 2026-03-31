@@ -18,6 +18,25 @@ Bus Tracking System (BTS) designed specifically for college students, staff, and
 - [🔮 Future Enhancements](#-future-enhancements)
 - [👨‍💻 Author](#-author)
 
+--- 
+## 🌐 Live Demo
+
+🔗 **Project Live URL:**  
+https://bts-production.up.railway.app
+
+---
+
+## 🔐 Demo Credentials
+
+### 🎓 Student Dashboard
+- **Student ID:** `LNCCBTC21077`
+- **Password:** `Abhishek`
+
+### 🧑‍💼 Admin Dashboard
+- **Admin ID:** `ADMIN001`
+- **Password:** `Admin@123`
+
+---
 ---
 
 ## 📝 Project Description
@@ -25,9 +44,13 @@ Bus Tracking System (BTS) designed specifically for college students, staff, and
 The **Bus Tracking System (BTS)** is tailored for college students, faculty, and staff to ensure nobody misses their bus or arrives late. With real-time tracking and live bus data, users stay informed and plan their travel efficiently.
 
 ---
+
 ## 📸 Project Snapshots 
 
-![Image](https://github.com/user-attachments/assets/ff585393-57ad-4fb9-b3df-9985f57a6696)
+
+
+<img width="1919" height="909" alt="Screenshot 2026-02-11 185402" src="https://github.com/user-attachments/assets/c32041e7-c023-4594-acf9-18bf3574f4d5" />
+
 
 ![Image](https://github.com/user-attachments/assets/90b66e09-eb3c-4931-a822-a7cbf810f748)
 
@@ -49,7 +72,10 @@ The **Bus Tracking System (BTS)** is tailored for college students, faculty, and
 
 ![Image](https://github.com/user-attachments/assets/8253dde7-296c-4c8a-8839-659a706319af)
 
----
+**Admin Dashboard**
+
+<img width="1915" height="909" alt="image" src="https://github.com/user-attachments/assets/c0e830ef-8f75-42ad-977c-082c4a6c97f3" />
+
 
 ## 📂 Project Structure
 
@@ -161,6 +187,7 @@ Frontend runs at: `http://localhost:5173`
 
 ## 🔮 Future Enhancements
 - 🗺️ Google Maps Integration  
+- 📱 Mobile Responsive Design  
 - 🧑‍💼 Admin Panel  
 - 📡 Live Location Updates  
 
@@ -168,5 +195,5 @@ Frontend runs at: `http://localhost:5173`
 
 ## 👨‍💻 Author
 
-**Khileshwari Deshmukh** – Web Developer   
-📧 khileshwarideshmukh01@gmail.com
+**Khileshwari Deshmukh** – FullStack Developer   
+📧khileshwarideshmukh01@gmail.com
